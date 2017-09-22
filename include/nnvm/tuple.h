@@ -611,4 +611,14 @@ struct hash<nnvm::TShape> {
 };
 }  // namespace std
 
+namespace dmlc {
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<float>, "tuple-of-float");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<double>, "tuple-of-double");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<int>, "tuple-of-int");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<uint32_t>, "tuple-of-int (non-negative)");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<uint64_t>, "tuple-of-long (non-negative)");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<std::string>, "tuple-of-string");
+  DMLC_DECLARE_TYPE_NAME(nnvm::Tuple<bool>, "tuple-of-bool");
+}
+
 #endif  // NNVM_TUPLE_H_
